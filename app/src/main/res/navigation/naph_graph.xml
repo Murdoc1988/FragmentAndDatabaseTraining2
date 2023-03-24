@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/naph_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fragmentanddatabasetraining2.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/home2student_list"
+            app:destination="@id/studentListFragment" />
+        <action
+            android:id="@+id/home2student_add"
+            app:destination="@id/studentAddFragment" />
+        <action
+            android:id="@+id/home2subject_add"
+            app:destination="@id/subjectAddFragment" />
+        <action
+            android:id="@+id/home2subject_new"
+            app:destination="@id/newSubjectFragment" />
+        <action
+            android:id="@+id/home2school_list"
+            app:destination="@id/schoolListFragment" />
+        <action
+            android:id="@+id/home2school_add"
+            app:destination="@id/schoolAddFragment" />
+        <action
+            android:id="@+id/home2subject_list"
+            app:destination="@id/subjectListFragment" />
+        <action
+            android:id="@+id/home2director_list"
+            app:destination="@id/directorListFragment" />
+        <action
+            android:id="@+id/home2director_new"
+            app:destination="@id/newDirectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolListFragment"
+        android:name="com.example.fragmentanddatabasetraining2.SchoolListFragment"
+        android:label="school_list_fragment"
+        tools:layout="@layout/school_list_fragment" >
+        <action
+            android:id="@+id/school_list2director_list"
+            app:destination="@id/directorListFragment" />
+        <action
+            android:id="@+id/school_list2school_add"
+            app:destination="@id/schoolAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolAddFragment"
+        android:name="com.example.fragmentanddatabasetraining2.SchoolAddFragment"
+        android:label="school_add_fragment"
+        tools:layout="@layout/school_add_fragment" />
+    <fragment
+        android:id="@+id/directorListFragment"
+        android:name="com.example.fragmentanddatabasetraining2.DirectorListFragment"
+        android:label="director_list_fragment"
+        tools:layout="@layout/director_list_fragment" >
+        <action
+            android:id="@+id/director_list2director_add"
+            app:destination="@id/directorAddFragment" />
+        <argument
+            android:name="School"
+            app:argType="com.example.fragmentanddatabasetraining2.data.entities.School" />
+    </fragment>
+    <fragment
+        android:id="@+id/directorAddFragment"
+        android:name="com.example.fragmentanddatabasetraining2.DirectorAddFragment"
+        android:label="director_add_fragment"
+        tools:layout="@layout/director_add_fragment" />
+    <fragment
+        android:id="@+id/studentListFragment"
+        android:name="com.example.fragmentanddatabasetraining2.StudentListFragment"
+        android:label="student_list_fragment"
+        tools:layout="@layout/student_list_fragment" >
+        <action
+            android:id="@+id/student_list2add_student"
+            app:destination="@id/studentAddFragment" />
+        <action
+            android:id="@+id/student_list2subject_list"
+            app:destination="@id/subjectListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentAddFragment"
+        android:name="com.example.fragmentanddatabasetraining2.StudentAddFragment"
+        android:label="student_add_fragment"
+        tools:layout="@layout/student_add_fragment" >
+        <action
+            android:id="@+id/student_add2student_list"
+            app:destination="@id/studentListFragment" />
+        <action
+            android:id="@+id/student_add2home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectListFragment"
+        android:name="com.example.fragmentanddatabasetraining2.SubjectListFragment"
+        android:label="subject_list_fragment"
+        tools:layout="@layout/subject_list_fragment" >
+        <action
+            android:id="@+id/subject_list2subject_add"
+            app:destination="@id/subjectAddFragment" />
+        <argument
+            android:name="school"
+            app:argType="com.example.fragmentanddatabasetraining2.data.entities.School" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectAddFragment"
+        android:name="com.example.fragmentanddatabasetraining2.SubjectAddFragment"
+        android:label="subject_add_fragment"
+        tools:layout="@layout/subject_add_fragment" >
+        <action
+            android:id="@+id/action_subjectAddFragment_to_subjectListFragment"
+            app:destination="@id/subjectListFragment" />
+        <action
+            android:id="@+id/subject_add2subject_list"
+            app:destination="@id/subjectListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newSubjectFragment"
+        android:name="com.example.fragmentanddatabasetraining2.newSubjectFragment"
+        android:label="new_subject_fragment"
+        tools:layout="@layout/subject_new_fragment" />
+    <fragment
+        android:id="@+id/newDirectorFragment"
+        android:name="com.example.fragmentanddatabasetraining2.newDirectorFragment"
+        android:label="new_director_fragment"
+        tools:layout="@layout/director_new_fragment" />
+</navigation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="School"
+        android:id="@id/schoolListFragment"
+        android:icon="@drawable/icon_school"/>
+    <item
+        android:title="Home"
+        android:id="@id/homeFragment"
+        android:icon="@drawable/icon_home"/>
+    <item
+        android:title="Student"
+        android:id="@id/studentListFragment"
+        android:icon="@drawable/icon_students"/>
+
+    <item
+        android:title="Subjets"
+        android:id="@id/subjectListFragment"
+        android:icon="@drawable/icon_subject"/>
+</menu>
